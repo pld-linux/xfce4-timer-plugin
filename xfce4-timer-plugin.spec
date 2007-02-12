@@ -1,5 +1,5 @@
 Summary:	Xfce panel timer plugin
-Summary(pl):	Wtyczka panelu Xfce odliczaj±ca czas
+Summary(pl.UTF-8):   Wtyczka panelu Xfce odliczajƒÖca czas
 Name:		xfce4-timer-plugin
 Version:	0.5.1
 Release:	2
@@ -22,9 +22,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This is a simple plugin that lets the user run an alarm at a specified
 time or at the end of a specified countdown period.
 
-%description -l pl
-Wtyczka ta pozwala na powiadamianie o zdefiniowanym wcze∂niej
-zdarzeniu, b±dº po up≥ywie okre∂lonego odcinka czasu.
+%description -l pl.UTF-8
+Wtyczka ta pozwala na powiadamianie o zdefiniowanym wcze≈õniej
+zdarzeniu, bƒÖd≈∫ po up≈Çywie okre≈õlonego odcinka czasu.
 
 %prep
 %setup -q
