@@ -1,5 +1,5 @@
 Summary:	Xfce panel timer plugin
-Summary(pl.UTF-8):   Wtyczka panelu Xfce odliczająca czas
+Summary(pl.UTF-8):	Wtyczka panelu Xfce odliczająca czas
 Name:		xfce4-timer-plugin
 Version:	0.5.1
 Release:	2
