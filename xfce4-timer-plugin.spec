@@ -7,12 +7,13 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://goodies.xfce.org/releases/xfce4-timer-plugin/%{name}-%{version}.tar.bz2
 # Source0-md5:	ba5ae0e25f69517338f74a27fbaf4ca2
+Patch0:		%{name}-libxfce4ui.patch
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	intltool
 BuildRequires:	libtool
-BuildRequires:	libxfcegui4-devel >= 4.2.0
+BuildRequires:	libxfce4ui-devel
 BuildRequires:	pkgconfig
 BuildRequires:	xfce4-dev-tools >= 4.4.0
 BuildRequires:	xfce4-panel-devel >= 4.4.0
@@ -29,6 +30,7 @@ zdarzeniu, bądź po upływie określonego odcinka czasu.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__intltoolize}
