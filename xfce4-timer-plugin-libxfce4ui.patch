@@ -39,3 +39,28 @@
  	@LIBXFCE4UTIL_CFLAGS@ \
  	@LIBXFCE4PANEL_CFLAGS@ \
  	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"
+--- xfce4-timer-plugin-0.6.4/src/xfcetimer.c.orig	2012-05-17 23:27:50.106931152 +0200
++++ xfce4-timer-plugin-0.6.4/src/xfcetimer.c	2012-05-17 23:32:20.133588295 +0200
+@@ -1395,7 +1395,7 @@
+ 
+   xfce_panel_plugin_block_menu (plugin);
+ 
+-  dlg = gtk_dialog_new_with_buttons (_("Xfce 4 Timer Plugin"),
++  dlg = xfce_titled_dialog_new_with_buttons (_("Xfce 4 Timer Plugin"),
+               GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
+               GTK_DIALOG_DESTROY_WITH_PARENT |
+               GTK_DIALOG_NO_SEPARATOR,
+@@ -1407,12 +1407,7 @@
+ 
+   gtk_container_set_border_width (GTK_CONTAINER(dlg), BORDER);
+ 
+-  header = xfce_create_header (NULL, _("Xfce4 Timer Options"));
+-  gtk_widget_set_size_request (GTK_BIN (header)->child, 200, 32);
+-  //gtk_container_set_border_width (GTK_CONTAINER (header), 6);
+-  gtk_widget_show (header);
+-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), header,
+-                      FALSE, TRUE, 0);
++  xfce_titled_dialog_set_subtitle (XFCE_TITLED_DIALOG(dlg), _("Xfce4 Timer Options"));
+ 
+   gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dlg)->vbox), vbox,
+                       TRUE, TRUE, WIDGET_SPACING);
