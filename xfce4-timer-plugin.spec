@@ -54,8 +54,15 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+%update_icon_cache hicolor
+
+%postun
+%update_icon_cache hicolor
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_libdir}/xfce4/panel-plugins/xfce4-timer
 %{_datadir}/xfce4/panel-plugins/xfce4-timer.desktop
+%{_iconsdir}/hicolor/*x*/apps/xfce4-timer.png
