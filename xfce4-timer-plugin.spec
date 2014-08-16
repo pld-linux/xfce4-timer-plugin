@@ -1,13 +1,13 @@
 Summary:	Xfce panel timer plugin
 Summary(pl.UTF-8):	Wtyczka panelu Xfce odliczająca czas
 Name:		xfce4-timer-plugin
-Version:	0.6.4
-Release:	2
+Version:	1.6.0
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/0.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	c2f9e113dcda742cd1559129b79f609b
-Patch0:		%{name}-libxfce4ui.patch
+Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.6/%{name}-%{version}.tar.bz2
+# Source0-md5:	3be2a4ccfb2af20441b1d25c2cea5f28
+Patch0:		format-security.patch
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake

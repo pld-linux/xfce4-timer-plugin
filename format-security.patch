@@ -1,0 +1,11 @@
+--- xfce4-timer-plugin-1.6.0/src/xfcetimer.c~	2014-06-05 00:31:03.000000000 +0200
++++ xfce4-timer-plugin-1.6.0/src/xfcetimer.c	2014-08-16 10:03:31.376720901 +0200
+@@ -190,7 +190,7 @@
+ 
+     dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_MODAL,
+                                     GTK_MESSAGE_WARNING,
+-                                    GTK_BUTTONS_NONE, dialog_message);
++                                    GTK_BUTTONS_NONE, "%s", dialog_message);
+                            
+     gtk_window_set_title ((GtkWindow *) dialog, dialog_title);                                    
+  
